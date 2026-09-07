@@ -497,7 +497,7 @@ body.home .site-header:not(.is-solid)::after {
 
 /* ===== TIMELINE (kuidas käib, horisontaalne vasakult paremale) ===== */
 .timeline { list-style: none; display: grid; gap: 44px; margin-top: 46px; }
-@media (min-width: 760px) { .timeline { grid-template-columns: repeat(3, 1fr); gap: 54px; } }
+@media (min-width: 760px) { .timeline { grid-template-columns: repeat(4, 1fr); gap: 54px; } }
 .tstep { position: relative; padding-top: 82px; }
 .tstep__dot {
   position: absolute; top: 0; left: 0; width: 54px; height: 54px; border-radius: 50%;
