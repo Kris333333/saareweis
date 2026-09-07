@@ -1,5 +1,5 @@
 // ===== ÜLEANDMISEL MUUDA AINULT SEDA: Kris'i Apps Scripti veebirakenduse aadress (/exec) =====
-var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyFy9oZZhnCeAJs4wqWJEnjvFaTFekjClu6aMFoTiaSH_vUpNbQzz4tkBEAn8ECoHZW8g/exec';
+var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJgTKnUoikwBsBe3t7f6H0kmCmsgzCSRK5ULSqbpSsgd8MM/exec';
 
 // Header: läbipaistev hero peal, muutub kerides tumedaks
 (function () {
@@ -118,7 +118,7 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyFy9oZZhnCeAJs4wqWJEn
   if (!stockEls.length) return;
 
   // ---- SEADISTUS -------------------------------------------------------
-  var SHEET_ID = '1tbl8BMe-Qi98wvZ1bHsxZ4cqwEH4ubQhPpJHx-AT1kQ'; // "SaareWeis ladu", veerg "jaanud"
+ var SHEET_ID = '1Gdtgx8fbUw8wpmIDYZWQrzGdqrlUOxWKu170MlKR4xw'; // "SaareWeis ladu", veerg "jaanud"
   // Kuidas silt käitub, kui laos > 0 (FOMO). Kui laos <= 0 -> "Otsas sel ringil".
   //  {cap:N} -> näita ALATI min(tegelik, N) (FOMO ka siis, kui laos on rohkem)
   //  {low:N} -> näita AINULT siis, kui tegelik <= N (ei mingit võlts-FOMO-t)
