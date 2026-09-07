@@ -522,6 +522,12 @@ body.home .site-header:not(.is-solid)::after {
 }
 .tstep__name { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--tx-bone); margin-bottom: 12px; }
 .tstep__text { color: var(--tx-bmuted); max-width: 34ch; }
+.timeline__note {
+  margin-top: 44px; padding: 16px 22px; max-width: 640px;
+  border-left: 3px solid var(--accent-2); border-radius: 4px;
+  background: rgba(204,106,74,.14); color: var(--tx-bone);
+  font-size: 1rem; font-weight: 500; line-height: 1.5;
+}
 
 /* ===== FAQ ===== */
 .faq { border-top: 1px solid var(--line-dk); max-width: 760px; margin-top: 8px; }
