@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lihakastid & tellimine · SaareWeis</title>
+  <meta name="description" content="SaareWeise lihakastid: Hakklihakast 80€, Perekast 105€, Grillmeistri kast 125€. Vaata sisu, tarnevõimalusi ja telli mahe rohumaaveise liha otse farmist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="et_EE">
+  <meta property="og:image" content="https://saareweis.ee/images/logo.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css?v=50">
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Menüü" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="header__nav" aria-label="Peamenüü">
+        <a href="meist.html">Meist</a>
+        <a href="tellimine.html">Lihakastid</a>
+        <a href="retseptid.html">Retseptid</a>
+        <a href="kkk.html">KKK</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a class="header__logo" href="index.html" aria-label="SaareWeis avaleht">
+        <img src="images/logo-mark.png" alt="SaareWeis">
+      </a>
+      <a class="btn btn--accent header__cta" href="#lihakastid">Telli</a>
+    </div>
+  </header>
+
+  <section class="pagehero pagehero--short" id="top">
+    <div class="pagehero__bg" aria-hidden="true"><img src="images/pagehero-tellimine.jpg?v=36" alt=""></div>
+    <div class="pagehero__overlay" aria-hidden="true"></div>
+    <div class="pagehero__content">
+      <p class="hero__eyebrow">Lihakastid & tellimine</p>
+      <h1 class="pagehero__title">Vali oma kast.</h1>
+      <p class="pagehero__sub">Iga kast sisaldab vähemalt 5&nbsp;kg liha. Hinnad sisaldavad käibemaksu.</p>
+    </div>
+  </section>
+
+  <!-- BOXES -->
+  <section class="section" id="lihakastid">
+    <div class="wrap">
+      <div class="boxes">
+        <article class="box">
+          <div class="box__media">
+            <img class="media-img media-img--box" loading="lazy" decoding="async" src="images/box-hakkliha.jpg?v=36" alt="Hakklihakast">
+          </div>
+          <div class="box__body">
+            <div class="box__meta"><span class="box__badge">5 kg · Igapäevane</span><span class="box__stock" data-stock="hakklihakast"></span></div>
+            <h3 class="box__name">Hakklihakast</h3>
+            <p class="box__tag">Laisale kokale lihtsateks lahendusteks.</p>
+            <p class="box__price">80&nbsp;€ <span>· 5 kg</span></p>
+            <ul class="box__list">
+              <li><strong>4 kg hakkliha</strong> (500 g pakid): burgeriteks, lihapallideks, täidisteks</li>
+              <li><strong>1 kg õhukesi praadimispihve</strong> (150 g tk): kiireks pannil või grillil</li>
+            </ul>
+            <a class="btn btn--accent box__cta" href="#telli" data-box="hakklihakast">Telli kast →</a>
+          </div>
+        </article>
+        <article class="box">
+          <div class="box__media">
+            <img class="media-img media-img--box" loading="lazy" decoding="async" src="images/box-perekast.jpg?v=36" alt="Perekast">
+          </div>
+          <div class="box__body">
+            <div class="box__meta"><span class="box__badge">5 kg · Perele</span><span class="box__stock" data-stock="perekast"></span></div>
+            <h3 class="box__name">Perekast</h3>
+            <p class="box__tag">7 toidukorda 4-liikmelisele perele.</p>
+            <p class="box__price">105&nbsp;€ <span>· 5 kg</span></p>
+            <ul class="box__list">
+              <li><strong>1,5 kg hakkliha</strong>: burgeriteks, lihapallideks, täidisteks</li>
+              <li><strong>1 kg õhukesi praadimispihve</strong>: kiireks pannil või grillil</li>
+              <li><strong>1,5 kg hautamisliha</strong>: ahjulihaks, pajaroogadeks</li>
+              <li><strong>1 kg lihakuubikuid</strong>: vokk, šašlõkk, seljanka</li>
+            </ul>
+            <a class="btn btn--accent box__cta" href="#telli" data-box="perekast">Telli kast →</a>
+          </div>
+        </article>
+        <article class="box box--featured">
+          <div class="box__media">
+            <img class="media-img media-img--box" loading="lazy" decoding="async" src="images/box-grill.jpg?v=36" alt="Grillmeistri kast">
+          </div>
+          <div class="box__body">
+            <div class="box__meta"><span class="box__badge">5 kg · Grillile</span><span class="box__stock" data-stock="grillkast"></span></div>
+            <h3 class="box__name">Grillmeistri kast</h3>
+            <p class="box__tag">Populaarseim valik.</p>
+            <p class="box__price">125&nbsp;€ <span>· 5 kg</span></p>
+            <ul class="box__list">
+              <li><strong>1 kg brisket</strong> (rinnatükk): madalal kuumusel pikalt (low &amp; slow)</li>
+              <li><strong>1,5 kg veiseribi</strong>: grillile või ahju aeglaselt</li>
+              <li><strong>1 kg õhukesi praadimispihve</strong>: kiireks pannil või grillil</li>
+              <li><strong>1,5 kg valik praadimis-/grillsteike</strong>: kõrgel kuumusel valmistamiseks</li>
+            </ul>
+            <a class="btn btn--accent box__cta" href="#telli" data-box="grillkast">Telli kast →</a>
+          </div>
+        </article>
+      </div>
+      <p class="boxes__foot">
+        Soovid vähem? Saadaval on ka <strong>hakkliha 500&nbsp;g · 8&nbsp;€</strong>.
+        Liha on värske ja jõuab sinuni jahutatult.
+      </p>
+      <div class="custombox" id="pusitellimus">
+        <div class="custombox__body">
+          <p class="eyebrow eyebrow--accent">Püsitellimus</p>
+          <h3 class="custombox__title">Oma kast, sinu lõikustega.</h3>
+          <p class="custombox__text">
+            Paneme kokku just sulle sobiva kasti. Püsitellimusena alates 10&nbsp;kg kuus,
+            vähemalt kolmeks kuuks. Hinna leiame koos, vastavalt sinu valikule.
+          </p>
+        </div>
+        <a class="btn btn--dark" href="kontakt.html">Küsi pakkumist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OOTELIST / TEATA -->
+  <section class="section section--cta" id="teata">
+    <div class="wrap cta">
+      <p class="eyebrow eyebrow--accent">Järgmine ring</p>
+      <h2 class="section__title">Kast otsas? Anna teada.</h2>
+      <p class="section__lead">Jäta e-post ja saadame sulle teate, kui järgmine ring avaneb. Järjekord on ajaline, nii et varasem broneering on eespool.</p>
+      <form class="notify" id="notifyForm" novalidate>
+        <input type="email" name="epost" placeholder="sinu@epost.ee" required aria-label="E-post">
+        <button type="submit" class="btn btn--accent">Teata mulle</button>
+        <p class="notify__status" id="notifyStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- KUIDAS KÄIB -->
+  <section class="section section--dark" id="kuidas">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--accent">Kuidas käib</p>
+      <h2 class="section__title">Kolm sammu õhtusöögini.</h2>
+      <ol class="timeline">
+        <li class="tstep">
+          <span class="tstep__dot">01</span>
+          <h3 class="tstep__name">Broneeri igal ajal</h3>
+          <p class="tstep__text">Vali sobiv kast ja jäta kontakt. Broneering on mittesiduv ja saad kohe kinnituse e-mailile. Lähed broneeringute listi.</p>
+        </li>
+        <li class="tstep">
+          <span class="tstep__dot">02</span>
+          <h3 class="tstep__name">Kinnita, kui liha tuleb</h3>
+          <p class="tstep__text">Kui uus partii saabub, saadame listile e-maili. Vasta „jah" ja koht on sinu. Kogused on piiratud, järjekord ajaline.</p>
+        </li>
+        <li class="tstep">
+          <span class="tstep__dot">03</span>
+          <h3 class="tstep__name">Kätte kolmapäeviti</h3>
+          <p class="tstep__text">Saadame liha Transmarki kaudu: järelevõtt Tallinnas, Tartus või Kuressaares, või kuller koju üle Eesti. Arve tuleb vahetult enne tarnet.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TELLI / VORM -->
+  <section class="section section--cta" id="telli">
+    <div class="wrap cta">
+      <p class="eyebrow eyebrow--accent">Telli</p>
+      <h2 class="section__title">Esita tellimus.</h2>
+      <p class="section__lead">
+        Täida vorm ja jäta kontakt. Kogused on piiratud ning järjekord ajaline.
+        Saadame sulle arve, mille saad tasuda pangaülekandega.
+      </p>
+      <form class="orderform" id="orderForm" novalidate>
+        <div class="hp" aria-hidden="true"><label>Jäta see väli tühjaks<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <h3 class="orderform__h">Vali kastid</h3>
+        <div class="qty-row">
+          <div class="qty" data-box="hakklihakast">
+            <span>Hakklihakast <small>5 kg · 80 €</small></span>
+            <input type="number" name="hakklihakast" min="0" max="10" step="1" value="0" inputmode="numeric" aria-label="Hakklihakast kogus">
+          </div>
+          <div class="qty" data-box="perekast">
+            <span>Perekast <small>5 kg · 105 €</small></span>
+            <input type="number" name="perekast" min="0" max="10" step="1" value="0" inputmode="numeric" aria-label="Perekast kogus">
+          </div>
+          <div class="qty" data-box="grillkast">
+            <span>Grillmeistri kast <small>5 kg · 125 €</small></span>
+            <input type="number" name="grillkast" min="0" max="10" step="1" value="0" inputmode="numeric" aria-label="Grillmeistri kast kogus">
+          </div>
+          <div class="qty" data-box="hakkliha500">
+            <span>Hakkliha <small>500 g · 8 €</small></span>
+            <input type="number" name="hakkliha500" min="0" max="10" step="1" value="0" inputmode="numeric" aria-label="Hakkliha 500 g kogus">
+          </div>
+        </div>
+
+        <h3 class="orderform__h">Sinu andmed</h3>
+        <div class="field">
+          <label for="of-nimi">Nimi *</label>
+          <input id="of-nimi" name="nimi" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="of-epost">E-post *</label>
+          <input id="of-epost" name="epost" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="of-tel">Tel nr *</label>
+          <input id="of-tel" name="tel" type="tel" required autocomplete="tel">
+        </div>
+
+        <h3 class="orderform__h">Soovitud kättesaamise variant *</h3>
+        <fieldset>
+          <label class="radio"><input type="radio" name="kattesaamine" value="Tulen ise järgi Muhu Lihasse" required><span>Tulen ise järgi Muhu Lihasse</span></label>
+          <label class="radio"><input type="radio" name="kattesaamine" value="Kulleriga koju kätte 10€"><span>Kulleriga koju kätte 10€</span></label>
+          <label class="radio"><input type="radio" name="kattesaamine" value="Tulen ise järgi Kuressaares 3.5€"><span>Tulen ise järgi Kuressaares 3.5€</span></label>
+          <label class="radio"><input type="radio" name="kattesaamine" value="Tulen ise järgi Tartus 3.5€"><span>Tulen ise järgi Tartus 3.5€</span></label>
+          <label class="radio"><input type="radio" name="kattesaamine" value="Tulen ise järgi Tallinnas 3.5€"><span>Tulen ise järgi Tallinnas 3.5€</span></label>
+        </fieldset>
+        <div class="field">
+          <label for="of-aadress">Täpne aadress (kui valisid kulleriga koju variandi)</label>
+          <input id="of-aadress" name="aadress" type="text" autocomplete="street-address">
+        </div>
+
+        <div class="field">
+          <label for="of-markused">Märkused / erisoovid</label>
+          <textarea id="of-markused" name="markused" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--accent btn--lg orderform__submit">Saada tellimus</button>
+        <p class="orderform__status" id="ofStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p class="cta__note">* Tellimus on mittesiduv broneering. Kui uus partii tuleb, saadame arve, mille saad tasuda pangaülekandega.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <p class="brand"><img class="brandlogo" src="images/logo-mark.png" alt="SaareWeis"> SaareWeis</p>
+        <p class="footer__tag">Mahe rohumaaveis otse Saaremaa karjamaalt.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Menüü</p>
+        <a href="meist.html">Meist</a>
+        <a href="tellimine.html">Lihakastid & tellimine</a>
+        <a href="retseptid.html">Retseptid</a>
+        <a href="kkk.html">KKK</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Kontakt</p>
+        <a href="mailto:saareweis@gmail.com">saareweis@gmail.com</a>
+        <a href="tel:+3725100711">+372 5100711</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Jälgi meid</p>
+        <a href="https://www.instagram.com/saareweis/" target="_blank" rel="noopener" class="social-link"><svg class="social-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"/></svg>Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61589958547744" target="_blank" rel="noopener" class="social-link"><svg class="social-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.6 8.3V6.9c0-.8.2-1.1 1.1-1.1h1.4V3.1l-2.3-.01c-2.6 0-3.6 1.6-3.6 3.6v1.6H9v2.9h2.2V21h3.4v-9.8h2.3l.4-2.9h-2.7z"/></svg>Facebook</a>
+      </div>
+    </div>
+    <div class="wrap footer__legal">
+      <p>© 2026 SaareWeis · [ Ettevõtte nimi ja registrikood ] · Saaremaa, Eesti · <a href="privaatsus.html">Privaatsus</a></p>
+      <a class="footer__cred" href="https://krattconsultancy.com" target="_blank" rel="noopener" aria-label="Kratt"><img src="images/kratt-logo.png" alt="Kratt" class="footer__cred-logo"></a>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=33"></script>
+</body>
+</html>

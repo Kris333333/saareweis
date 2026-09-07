@@ -1,0 +1,18 @@
+# SaareWeis - Netlify deploy config
+
+[build]
+  publish = "."
+
+# Turvapäised
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

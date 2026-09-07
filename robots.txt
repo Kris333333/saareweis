@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saareweis.ee/sitemap.xml
