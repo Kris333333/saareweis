@@ -40,7 +40,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 20px;
 }
 .eyebrow--accent { color: var(--tx-muted); }
-.section--dark .eyebrow--accent, .hero .eyebrow--accent { color: var(--tx-bmuted); }
+.section--dark .eyebrow--accent, .hero .eyebrow--accent, .familynote--dark .eyebrow--accent { color: var(--tx-bmuted); }
 
 .section__title {
   font-family: var(--serif); font-weight: 400;
@@ -558,14 +558,22 @@ body.home .site-header:not(.is-solid)::after {
 
 /* ===== PERE SÕNUM ===== */
 .familynote { background: var(--bone); }
-.familynote__inner { max-width: 720px; margin: 0 auto; text-align: center; padding: clamp(52px, 7vw, 82px) 24px; }
+.familynote--dark { background: var(--black); }
+.familynote__inner {
+  display: grid; gap: 36px; align-items: center;
+  max-width: 980px; margin: 0 auto; padding: clamp(52px, 7vw, 82px) 24px;
+}
+@media (min-width: 760px) { .familynote__inner { grid-template-columns: .85fr 1.15fr; gap: 54px; } }
+.familynote__media .ph { aspect-ratio: 4 / 5; width: 100%; }
+.familynote__text { text-align: left; }
 .familynote__quote {
   font-family: var(--serif); font-weight: 400; font-style: italic;
   font-size: clamp(1.45rem, 3.1vw, 2.05rem); line-height: 1.42; color: var(--tx-dark);
   margin: 14px 0 22px;
 }
-.familynote__sign { font-family: var(--serif); font-size: 1.12rem; color: var(--bone); }
-.familynote__note { margin-top: 20px; font-size: .78rem; color: var(--tx-muted); font-style: italic; }
+.familynote--dark .familynote__quote { color: var(--tx-bone); }
+.familynote__sign { font-family: var(--serif); font-size: 1.12rem; color: var(--tx-muted); }
+.familynote--dark .familynote__sign { color: var(--tx-bmuted); }
 
 /* ===== CTA / SIGNUP ===== */
 .cta { max-width: 640px; }
