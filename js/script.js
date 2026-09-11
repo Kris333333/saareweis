@@ -82,11 +82,11 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
   function onOk(btn) {
     form.reset();
     btn.disabled = false;
-    setStatus('Aitäh! Tellimus on saadetud. Võtame sinuga peagi ühendust.', 'ok');
+    setStatus('Aitäh! Tellimus on saadetud. Vötame sinuga peagi ühendust.', 'ok');
   }
   function onFail(btn) {
     btn.disabled = false;
-    setStatus('Midagi läks valesti. Proovi uuesti või kirjuta saareweis@gmail.com.', 'error');
+    setStatus('Midagi läks valesti. Proovi uuesti vöi kirjuta saareweis@gmail.com.', 'error');
   }
 
   // Saada tellimus Apps Scriptile (logib + vähendab ladu + teavitab e-postiga)
