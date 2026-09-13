@@ -423,6 +423,12 @@ body.home .site-header:not(.is-solid)::after {
 .box__meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; align-self: flex-start; margin-bottom: 14px; }
 .box__meta .box__badge { margin-bottom: 0; }
 .box__stock { display: none; font-family: var(--sans); font-weight: 600; font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; padding: 5px 11px; border-radius: 100px; }
+.batch-badge {
+  display: inline-block; font-family: var(--sans); font-weight: 600; font-size: .74rem;
+  letter-spacing: .09em; text-transform: uppercase; color: var(--tx-dark);
+  background: rgba(42,33,26,.08); padding: 8px 16px; border-radius: 100px; margin-bottom: 20px;
+}
+.section--dark .batch-badge, .hero .batch-badge { color: var(--tx-bone); background: rgba(245,239,227,.12); }
 .box__stock.is-low { display: inline-block; color: var(--warn); background: rgba(178,106,0,.13); }
 .box__stock.is-out { display: inline-block; color: var(--err); background: rgba(192,57,43,.13); }
 .box__stock.is-next { display: inline-block; color: var(--tx-muted); background: rgba(42,33,26,.07); }

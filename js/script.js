@@ -119,13 +119,12 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
 
   // ---- SEADISTUS -------------------------------------------------------
  var SHEET_ID = '1Gdtgx8fbUw8wpmIDYZWQrzGdqrlUOxWKu170MlKR4xw'; // "SaareWeis ladu", veerg "jaanud"
-  // Kuidas silt käitub, kui laos > 0 (FOMO). Kui laos <= 0 -> "Otsas sel ringil".
-  //  {cap:N} -> näita ALATI min(tegelik, N) (FOMO ka siis, kui laos on rohkem)
-  //  {low:N} -> näita AINULT siis, kui tegelik <= N (ei mingit võlts-FOMO-t)
+  // Kuidas silt käitub, kui laos > 0. Kui laos <= 0 -> "Otsas sel ringil".
+  //  {low:N} -> näita AINULT siis, kui tegelik <= N (ehk siis, kui laoseis on päriselt madal)
   var STOCK = {
     hakklihakast: { low: 5 },
-    perekast:     { cap: 5 },
-    grillkast:    { cap: 3 }
+    perekast:     { low: 5 },
+    grillkast:    { low: 3 }
   };
   // ----------------------------------------------------------------------
 
@@ -171,8 +170,6 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
         }
         var row = document.querySelector('.qty[data-box="' + k + '"]');
         if (row) { var inp = row.querySelector('input'); if (inp) { inp.value = 0; inp.disabled = true; } row.classList.add('qty--out'); }
-      } else if (cfg && cfg.cap != null) {
-        el.textContent = 'Viimased ' + Math.min(n, cfg.cap) + ' kasti'; el.classList.add('is-low');
       } else if (cfg && cfg.low != null && n <= cfg.low) {
         el.textContent = 'Viimased ' + n + ' kasti'; el.classList.add('is-low');
       } else {
