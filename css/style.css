@@ -422,7 +422,8 @@ body.home .site-header:not(.is-solid)::after {
 /* ladu: "kaste jäänud" silt "5 kg · X" badge'i kõrval */
 .box__meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; align-self: flex-start; margin-bottom: 14px; }
 .box__meta .box__badge { margin-bottom: 0; }
-.box__stock { display: none; font-family: var(--sans); font-weight: 600; font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; padding: 5px 11px; border-radius: 100px; }
+.box__stock { display: none; font-family: var(--sans); font-style: normal; font-weight: 600; font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; padding: 5px 11px; border-radius: 100px; }
+.qty__stock { margin-left: 8px; vertical-align: middle; }
 .batch-badge {
   display: inline-block; font-family: var(--sans); font-weight: 600; font-size: .74rem;
   letter-spacing: .09em; text-transform: uppercase; color: var(--tx-dark);
