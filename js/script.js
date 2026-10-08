@@ -46,7 +46,7 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
 
   function val(n) { var el = form.elements[n]; return el ? String(el.value).trim() : ''; }
   function num(n) { return parseInt(val(n), 10) || 0; }
-  function boxCount() { return num('hakklihakast') + num('perekast') + num('grillkast') + num('hakkliha500'); }
+  function boxCount() { return num('hakklihakast') + num('perekast') + num('grillkast') + num('hakkliha500') + num('ribeyekombo') + num('tbonekombo') + num('veiseribi'); }
   function setStatus(msg, kind) {
     statusEl.textContent = msg;
     statusEl.classList.remove('is-error', 'is-warn', 'is-ok');
@@ -97,6 +97,7 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
       kattesaamine: val('kattesaamine'), aadress: val('aadress'),
       hakklihakast: num('hakklihakast'), perekast: num('perekast'),
       grillkast: num('grillkast'), hakkliha500: num('hakkliha500'),
+      ribeyekombo: num('ribeyekombo'), tbonekombo: num('tbonekombo'), veiseribi: num('veiseribi'),
       markused: val('markused')
     };
     var settled = false;
@@ -121,10 +122,13 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
  var SHEET_ID = '1Gdtgx8fbUw8wpmIDYZWQrzGdqrlUOxWKu170MlKR4xw'; // "SaareWeis ladu", veerg "jaanud"
   // Kuidas silt käitub, kui laos > 0. Kui laos <= 0 -> "Otsas sel ringil".
   //  {low:N} -> näita AINULT siis, kui tegelik <= N (ehk siis, kui laoseis on päriselt madal)
+  //  {always:true, unit:'...'} -> näita ALATI tegelikku kogust, nt "Alles 4 tk"
   var STOCK = {
     hakklihakast: { low: 5 },
     perekast:     { low: 5 },
-    grillkast:    { low: 3 }
+    grillkast:    { low: 3 },
+    ribeyekombo:  { always: true, unit: 'tk' },
+    tbonekombo:   { always: true, unit: 'tk' }
   };
   // ----------------------------------------------------------------------
 
@@ -170,6 +174,8 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
         }
         var row = document.querySelector('.qty[data-box="' + k + '"]');
         if (row) { var inp = row.querySelector('input'); if (inp) { inp.value = 0; inp.disabled = true; } row.classList.add('qty--out'); }
+      } else if (cfg && cfg.always) {
+        el.textContent = 'Alles ' + n + ' ' + (cfg.unit || 'tk'); el.classList.add('is-low');
       } else if (cfg && cfg.low != null && n <= cfg.low) {
         el.textContent = 'Viimased ' + n + ' kasti'; el.classList.add('is-low');
       } else {
@@ -197,6 +203,7 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
       nimi: '', epost: nf.elements['epost'].value.trim(), tel: '',
       kattesaamine: '', aadress: '',
       hakklihakast: 0, perekast: 0, grillkast: 0, hakkliha500: 0,
+      ribeyekombo: 0, tbonekombo: 0, veiseribi: 0,
       markused: 'OOTELIST - soovib teadet jargmisest ringist'
     };
     var settled = false;
