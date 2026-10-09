@@ -187,6 +187,25 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
         el.textContent = '';
       }
     });
+
+    // Avalehe lihakastide eelvaade: näita alati 3 toodet. Kui mönel neist on
+    // laoseis otsas, peida see kaart täielikult ja tösta nähtavale järgmine
+    // saadaolev toode sellest samast prioriteedijärjekorrast.
+    if (isHome) {
+      var PREVIEW_ORDER = ['hakklihakast', 'perekast', 'grillkast', 'ribeyekombo', 'tbonekombo'];
+      var grid = document.querySelector('#lihakastid .boxes');
+      if (grid) {
+        var shown = 0;
+        PREVIEW_ORDER.forEach(function (key) {
+          var stockEl = grid.querySelector('.box__stock[data-stock="' + key + '"]');
+          var previewCard = stockEl && stockEl.closest('.box');
+          if (!previewCard) return;
+          var outOfStock = (key in map) && map[key] <= 0;
+          if (!outOfStock && shown < 3) { previewCard.hidden = false; shown++; }
+          else { previewCard.hidden = true; }
+        });
+      }
+    }
   }
 })();
 
