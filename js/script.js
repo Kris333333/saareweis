@@ -174,6 +174,11 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
         }
         var row = document.querySelector('.qty[data-box="' + k + '"]');
         if (row) { var inp = row.querySelector('input'); if (inp) { inp.value = 0; inp.disabled = true; } row.classList.add('qty--out'); }
+        // Tõsta otsas olev toode oma rühmas (kaardid vöi tellimisvormi read) järjekorras viimaseks.
+        // Kuna leht laeb laoseisu värskelt iga avamise/värskendamise korral algsest HTML-
+        // järjekorrast, liigub toode uuesti tavakohale niipea, kui laoseis on jälle üle 0.
+        if (card && card.parentNode) { card.parentNode.appendChild(card); }
+        else if (row && row.parentNode) { row.parentNode.appendChild(row); }
       } else if (cfg && cfg.always) {
         el.textContent = 'Alles ' + n + ' ' + (cfg.unit || 'tk'); el.classList.add('is-low');
       } else if (cfg && cfg.low != null && n <= cfg.low) {
