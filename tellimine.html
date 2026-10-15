@@ -304,6 +304,21 @@
           <textarea id="of-markused" name="markused" rows="3"></textarea>
         </div>
 
+        <div class="field">
+          <label for="of-kustkuulsid">Kust sa meist kuulsid?</label>
+          <select id="of-kustkuulsid" name="kustkuulsid">
+            <option value="Facebook">Facebook</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Soovitas söber/tuttav">Soovitas söber/tuttav</option>
+            <option value="Google otsing">Google otsing</option>
+            <option value="Muu">Muu</option>
+          </select>
+        </div>
+        <div class="field" id="kustkuulsidMuuField" hidden>
+          <label for="of-kustkuulsid-muu">Täpsusta, kust kuulsid</label>
+          <input id="of-kustkuulsid-muu" name="kustkuulsidmuu" type="text">
+        </div>
+
         <button type="submit" class="btn btn--accent btn--lg orderform__submit">Saada tellimus</button>
         <p class="orderform__status" id="ofStatus" role="status" aria-live="polite"></p>
       </form>

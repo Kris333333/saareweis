@@ -47,11 +47,26 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
   function val(n) { var el = form.elements[n]; return el ? String(el.value).trim() : ''; }
   function num(n) { return parseInt(val(n), 10) || 0; }
   function boxCount() { return num('hakklihakast') + num('perekast') + num('grillkast') + num('hakkliha500') + num('ribeyekombo') + num('tbonekombo') + num('veiseribi'); }
+  function kustKuulsidValue() {
+    var v = val('kustkuulsid');
+    if (v === 'Muu') { return val('kustkuulsidmuu') || 'Muu'; }
+    return v;
+  }
   function setStatus(msg, kind) {
     statusEl.textContent = msg;
     statusEl.classList.remove('is-error', 'is-warn', 'is-ok');
     if (kind) statusEl.classList.add('is-' + kind);
   }
+
+  // "Kust sa meist kuulsid?" - näita vabateksti välja ainult valiku "Muu" korral
+  (function () {
+    var select = form.elements['kustkuulsid'];
+    var muuField = document.getElementById('kustkuulsidMuuField');
+    if (!select || !muuField) return;
+    function toggle() { muuField.hidden = select.value !== 'Muu'; }
+    select.addEventListener('change', toggle);
+    toggle();
+  })();
 
   // Carry the chosen box into the form: "Telli kast" buttons pre-select that product
   function pickBox(name) {
@@ -81,6 +96,7 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
 
   function onOk(btn) {
     form.reset();
+    if (form.elements['kustkuulsid']) { form.elements['kustkuulsid'].dispatchEvent(new Event('change')); }
     btn.disabled = false;
     setStatus('Aitäh! Tellimus on saadetud. Vötame sinuga peagi ühendust.', 'ok');
   }
@@ -98,6 +114,7 @@ var SW_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzTkE8jZAKPdz4fv7yiFJg
       hakklihakast: num('hakklihakast'), perekast: num('perekast'),
       grillkast: num('grillkast'), hakkliha500: num('hakkliha500'),
       ribeyekombo: num('ribeyekombo'), tbonekombo: num('tbonekombo'), veiseribi: num('veiseribi'),
+      kustkuulsid: kustKuulsidValue(),
       markused: val('markused')
     };
     var settled = false;
